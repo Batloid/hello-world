@@ -30,12 +30,12 @@ ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 IMAGE_TYPE=debug
 OUTPUT_SUFFIX=cof
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 else
 IMAGE_TYPE=production
 OUTPUT_SUFFIX=hex
 DEBUGGABLE_SUFFIX=cof
-FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+FINAL_IMAGE=dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 endif
 
 ifeq ($(COMPARE_BUILD), true)
@@ -87,7 +87,7 @@ FIXDEPS=fixDeps
 ifneq ($(INFORMATION_MESSAGE), )
 	@echo $(INFORMATION_MESSAGE)
 endif
-	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+	${MAKE}  -f nbproject/Makefile-default.mk dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 
 MP_CC="C:\PROGRA~2\PICC\CCSCON.exe"
 MP_LD="C:\PROGRA~2\PICC\CCSCON.exe"
@@ -99,8 +99,8 @@ ${OBJECTDIR}/MedicionYControl.o: MedicionYControl.c  nbproject/Makefile-${CND_CO
 ifeq (2,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
 	${MP_CC}  out="${OBJECTDIR}"  MedicionYControl.c +FH +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P #__18F452=1 
-	@mv ${OBJECTDIR}/MedicionYControl.cof "dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/MedicionYControl.hex "dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.hex"
+	@mv ${OBJECTDIR}/MedicionYControl.cof "dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/MedicionYControl.hex "dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.hex"
 else 
 	${MP_CC}  out=""${OBJECTDIR}"" MedicionYControl.c +EXPORT +FH +DF +CC  #__DEBUG=1 +ICD +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P #__18F452=1 +EXPORTD="${OBJECTDIR}"  
 	
@@ -112,8 +112,8 @@ ${OBJECTDIR}/MedicionYControl.o: MedicionYControl.c  nbproject/Makefile-${CND_CO
 ifeq (2,1) 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
 	${MP_CC}  out="${OBJECTDIR}"  MedicionYControl.c +FH +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P #__18F452=1 
-	@mv ${OBJECTDIR}/MedicionYControl.cof "dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.cof" 
-	@mv ${OBJECTDIR}/MedicionYControl.hex "dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.hex"
+	@mv ${OBJECTDIR}/MedicionYControl.cof "dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.cof" 
+	@mv ${OBJECTDIR}/MedicionYControl.hex "dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.hex"
 else 
 	${MP_CC}  out=""${OBJECTDIR}"" MedicionYControl.c +EXPORT +FH +DF +CC +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P #__18F452=1 +EXPORTD="${OBJECTDIR}"  
 	
@@ -124,22 +124,22 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  18F452.h  
+dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  18F452.h  
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
 ifeq (2,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FH +DF +CC LINK=MedicionYControl.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/MedicionYControl.o +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FH +DF +CC LINK=MedYControl.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/MedicionYControl.o +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P
 	
 endif 
 	
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/MedicionYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  18F452.h 
+dist/${CND_CONF}/${IMAGE_TYPE}/MedYControl.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  18F452.h 
 	${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
 ifeq (2,1) 
 	
 else 
-	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FH +DF +CC LINK=MedicionYControl.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/MedicionYControl.o +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P
+	${MP_LD}   out="dist/${CND_CONF}/${IMAGE_TYPE}"  +FH +DF +CC LINK=MedYControl.X.${IMAGE_TYPE}.hex=${OBJECTDIR}/MedicionYControl.o +Y=9 +EA +DF +LN +T +A +M +J +EA +Z -P
 	
 endif 
 	

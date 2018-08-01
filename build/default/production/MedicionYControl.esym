@@ -1,7 +1,7 @@
 D G "__PCH__" 0 0 ""5.015""
 D G "__DEVICE__" 0 0 ""
 D G "__DATE__" 0 0 ""01-ago.-18""
-D G "__TIME__" 0 0 ""18:07:38""
+D G "__TIME__" 0 0 ""19:10:51""
 D G "__18F452" 0 0 "1" "* File:   MedicionYControl.c"
 C G "" 0 1 1 "*"
 C G "" 0 1 2 "*"
@@ -850,17 +850,17 @@ C L "main" 0 39 1 "FUNCTION"
 C L "main" 0 39 1 "FUNCTION"
 C L "main" 0 39 1 "FUNCTION"
 C L "main" 0 39 1 "FUNCTION"
-C L "main" 0 39 1 "FUNCTION"
-F G "Leer_Parametros_EEPROM" 0 96 "void()" `642 
+C L "main" 0 39 2 "FUNCTION"
+F G "Leer_Parametros_EEPROM" 0 97 "void()" `642 
 C L "Leer_Parametros_EEPROM" 0 39 1 "FUNCTION"
-F G "analiza_checksum" 0 104 "int8()" `643 
-V L "l_digit_long" 0 106 "int16" `650 
-V L "valor" 0 107 "int8" `651 
+F G "analiza_checksum" 0 105 "int8()" `643 
+V L "l_digit_long" 0 107 "int16" `650 
+V L "valor" 0 108 "int8" `651 
 C L "analiza_checksum" 0 39 1 "FUNCTION"
 C L "analiza_checksum" 0 39 1 "FUNCTION"
 C L "analiza_checksum" 0 39 1 "FUNCTION"
 C L "analiza_checksum" 0 39 1 "FUNCTION"
-F G "analiza_temp_vbat" 0 132 "void()" `661 
+F G "analiza_temp_vbat" 0 133 "void()" `661 
 C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
 C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
 C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
@@ -869,19 +869,19 @@ C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
 C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
 C L "analiza_temp_vbat" 0 39 1 "FUNCTION"
 C L "lee_temperatura" 0 39 1 "FUNCTION"
-F G "lee_temperatura" 0 159 "void()" `662 
-V L "temperatura" 0 160 "int8" `663 
+F G "lee_temperatura" 0 160 "void()" `662 
+V L "temperatura" 0 161 "int8" `663 
 C L "lee_temperatura" 0 39 1 "FUNCTION"
 C L "lee_temperatura" 0 39 1 "FUNCTION"
 C L "lee_temperatura" 0 39 1 "FUNCTION"
 C L "lee_temperatura" 0 39 1 "FUNCTION"
 C L "pulsa_encendido_pc" 0 39 1 "FUNCTION"
-F G "pulsa_encendido_pc" 0 182 "void()" `646 
+F G "pulsa_encendido_pc" 0 183 "void()" `646 
 C L "pulsa_encendido_pc" 0 39 1 "FUNCTION"
 C L "pulsa_encendido_pc" 0 39 1 "FUNCTION"
 C L "pulsa_encendido_pc" 0 39 1 "FUNCTION"
-F G "arranca_cpu" 0 191 "void()" `664 
-V L "rtcc_on_off" 0 192 "int8" `665 
+F G "arranca_cpu" 0 192 "void()" `664 
+V L "rtcc_on_off" 0 193 "int8" `665 
 C L "arranca_cpu" 0 39 1 "FUNCTION"
 C L "arranca_cpu" 0 39 1 "FUNCTION"
 C L "arranca_cpu" 0 39 1 "FUNCTION"

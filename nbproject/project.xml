@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>MedicionYControl</name>
-            <creation-uuid>4a5ba7de-f9d7-41fa-85f5-2958eb1f0b29</creation-uuid>
+            <name>MedYControl</name>
+            <creation-uuid>ff686bea-70fb-442d-9ce0-6ce203584ff1</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

@@ -269,5 +269,7 @@ void arranca_cpu(void) {
         estado_deteccion_3 = 0;
         //	lee_temperatura();			//mide la tension y genera el estado de los flag
         analiza_temp_vbat();
-    
+        Modificando el código. en este punto.
+                obvio que no va a funcionar
+                
 } //FINAL DE LA FUNCION
