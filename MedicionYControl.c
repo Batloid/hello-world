@@ -98,7 +98,7 @@ void Leer_Parametros_EEPROM(void) {
     temper_sup = read_eeprom(9); //temperaturas de encendido y apagado equipo
     temper_inf = read_eeprom(10);
     checksum_rom = read_eeprom(13);
-
+    aca dice caca
 }
 
 char analiza_checksum() {
