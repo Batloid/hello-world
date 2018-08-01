@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=MedYControl.X
+PROJECTNAME=MedicionYControl.X
 
 # Active Configuration
 DEFAULTCONF=default
