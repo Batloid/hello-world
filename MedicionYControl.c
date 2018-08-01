@@ -89,7 +89,8 @@ void main(void) {
     Leer_Parametros_EEPROM();
     if (analiza_checksum() != 0) {
         //sigue el programa
-
+//sera que será
+        
     }
 }
 
