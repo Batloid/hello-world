@@ -1,0 +1,20 @@
+ÀÄMedYControl
+   ÀÄmain  0/192  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄLeer_Parametros_EEPROM  0/76  Ram=1
+      ÀÄanaliza_checksum  0/198  Ram=4
+         ÃÄ@PSTRINGCN_637  0/30  Ram=3
+         ³  ÀÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÃÄ@PRINTF_X_637  0/62  Ram=2
+         ³  ÃÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ³  ÀÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÃÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÃÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÃÄ@PSTRINGCN_637  0/30  Ram=3
+         ³  ÀÄ*
+         ÃÄ@PRINTF_X_637  0/62  Ram=2
+         ³  ÀÄ*
+         ÃÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÃÄ@PUTCHAR_BIU_1  0/28  Ram=1
+         ÀÄ@PSTRINGC_637  0/34  Ram=2
+            ÀÄ@PUTCHAR_BIU_1  0/28  Ram=1

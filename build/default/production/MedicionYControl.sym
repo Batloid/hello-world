@@ -1,0 +1,87 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     temper_sup
+005     temper_inf
+006     checksum_rom
+007.0   equipo_on
+007.1   habilit_temp
+008-009 analiza_checksum.l_digit_long
+008     main.@SCRATCH1
+008     Leer_Parametros_EEPROM.@SCRATCH1
+00A     analiza_checksum.valor
+00B     @PSTRINGCN_637.P1
+00B     @PRINTF_X_637.P2
+00B     analiza_checksum.@SCRATCH1
+00B     @PSTRINGC_637.@SCRATCH1
+00C     @PRINTF_X_637.P1
+00C     @PSTRINGCN_637.@SCRATCH1
+00C     @PSTRINGC_637.@SCRATCH2
+00D     @PSTRINGCN_637.@SCRATCH2
+00E     @PUTCHAR_BIU_1.P1
+F83     PSP_DATA
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const652.call
+00001C  @const658.call
+00003A  @const659.call
+00005E  Leer_Parametros_EEPROM
+0000AA  @PUTCHAR_BIU_1
+0000C6  @PSTRINGCN_637
+0000E4  @PRINTF_X_637
+000122  @PSTRINGC_637
+000144  analiza_checksum
+00020A  @cinit1
+00020A  main
+00024E  @cinit2
+
+Project Directory:
+    C:\Users\Alejandro\MPLABXProjects\MedYControl.X\
+
+Project Files:
+    MedicionYControl.c                                      [01-ago.-18 17:43  CRC=2DABC745]
+    ..\..\..\..\Program Files (x86)\PICC\devices\18F452.h   [12-nov.-13 14:35  CRC=1418FEBC]
+    Definiciones.h                                          [27-jul.-18 20:53  CRC=22D16C7A]
+
+Source signature=87679EF5
+
+Units:
+    MedicionYControl (main)
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __18F452 1
+
+Output Files:
+    XREF file:   build\default\production\MedicionYControl.xsym
+    Errors:      build\default\production\MedicionYControl.err
+    Ext Symbols: build\default\production\MedicionYControl.esym
+    INHX32:      build\default\production\MedicionYControl.hex
+    Symbols:     build\default\production\MedicionYControl.sym
+    List:        build\default\production\MedicionYControl.lst
+    Debug/COFF:  build\default\production\MedicionYControl.cof
+    Project:     MedicionYControl.ccspjt
+    Call Tree:   build\default\production\MedicionYControl.tre
+    Statistics:  build\default\production\MedicionYControl.STA

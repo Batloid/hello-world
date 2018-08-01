@@ -1,0 +1,54 @@
+
+ROM used:   714/32768 (2%)
+            714/32768 (2%) including unused fragments
+
+            0.7 Average locations per line
+            9.6 Average locations per statement
+
+RAM used:   9/1536 (1%) at main() level
+            15/1536 (1%) worst case
+
+Stack used: 3 worst case (3 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  273    74 100  MedicionYControl.c
+  716     0   0  ..\..\..\..\Program Files (x86)\PICC\devices\18F452.h
+   37     0   0  Definiciones.h
+----- -----
+ 1026    74 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     28   2    1             @PUTCHAR_BIU_1
+0    192  13    1   737  3.9  main
+0     76   5    1    84  1.7  Leer_Parametros_EEPROM
+0    198  14    4   472  6.0  analiza_checksum
+0     24   2    0             @const652
+0     30   2    3             @PSTRINGCN_637
+0     62   4    2             @PRINTF_X_637
+0     30   2    0             @const658
+0     36   3    0             @const659
+0     34   2    2             @PSTRINGC_637
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              74
+    Comments                283
+    Volume (V)              1611
+    Difficulty (D)          11.0
+    Effort to implement (E) 17636
+    Time to implement (T)   16 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   3
+    Maintainability (MI)    117
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE   710  32054  
+
+
+

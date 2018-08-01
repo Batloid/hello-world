@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\MedicionYControl.hex
+Processor_Text=PIC18F452
+CCSVersion=5.015
+Compiler=PCH
+[Target Data]
+FileList=build\default\production\MedicionYControl.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\devices\;C:\Program Files (x86)\PICC\drivers\
+[build\default\production\MedicionYControl.c]
+Type=4
+[mru-list]
+1=build\default\production\MedicionYControl.c
+[Units]
+Count=1
+1=MedicionYControl (main)

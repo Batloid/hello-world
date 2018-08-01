@@ -1,0 +1,26 @@
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:194:5:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:195:12:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:202:9:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:205:9:  Error#12  Undefined identifier   h_digit
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:206:25:  Error#12  Undefined identifier  -- retardo_segundos
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:211:55:  Error#12  Undefined identifier   temperatura
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:217:13:  Error#12  Undefined identifier   valor
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:219:20:  Error#12  Undefined identifier   valor
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:220:24:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:223:38:  Error#12  Undefined identifier   temperatura
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:227:44:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:232:21:  Error#12  Undefined identifier   h_digit
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:233:37:  Error#12  Undefined identifier  -- retardo_segundos
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:238:21:  Error#12  Undefined identifier   h_digit
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:239:37:  Error#12  Undefined identifier  -- retardo_segundos
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:244:21:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:246:21:  Error#12  Undefined identifier   valor
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:247:21:  Error#12  Undefined identifier   flag_f5
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:257:58:  Error#12  Undefined identifier   temperatura
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:264:7:  Error#51  A numeric expression must appear here
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:266:9:  Error#12  Undefined identifier   estado_deteccion_1
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:267:9:  Error#12  Undefined identifier   estado_deteccion_2
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:268:9:  Error#12  Undefined identifier   estado_deteccion_3
+C:\Users\Alejandro\MPLABXProjects\MedYControl.X\MedicionYControl.c:272:1:  Error#79  Expect }
+      24 Errors,  0 Warnings.
+Build Failed.

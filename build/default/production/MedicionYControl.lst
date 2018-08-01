@@ -1,0 +1,678 @@
+CCS PCH C Compiler, Version 5.015, 5967               01-ago.-18 17:43
+
+               Filename:   C:\Users\Alejandro\MPLABXProjects\MedYControl.X\build\default\production\MedicionYControl.lst
+
+               ROM used:   714 bytes (2%)
+                           Largest free fragment is 32054
+               RAM used:   9 (1%) at main() level
+                           15 (1%) worst case
+               Stack used: 3 locations
+               Stack size: 31
+
+*
+0000:  GOTO   020A
+.................... /*  
+....................  * File:   MedicionYControl.c 
+....................  * Author: Alejandro Cabral y Fabricio Pacha 
+....................  * 
+....................  * Created on 25 de julio de 2018, 17:38 
+....................  */ 
+....................  
+.................... //Libreria del pic a utilizar 
+.................... #include <18F452.h> 
+.................... //////////// Standard Header file for the PIC18F452 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC18F452 
+0004:  DATA 43,68
+0006:  DATA 65,63
+0008:  DATA 6B,73
+000A:  DATA 75,6D
+000C:  DATA 20,72
+000E:  DATA 6F,6D
+0010:  DATA 20,63
+0012:  DATA 70,75
+0014:  DATA 3A,20
+0016:  DATA 25,32
+0018:  DATA 58,0D
+001A:  DATA 0A,00
+001C:  DATA 43,68
+001E:  DATA 65,63
+0020:  DATA 6B,73
+0022:  DATA 75,6D
+0024:  DATA 20,63
+0026:  DATA 61,6C
+0028:  DATA 63,75
+002A:  DATA 6C,61
+002C:  DATA 64,6F
+002E:  DATA 20,63
+0030:  DATA 70,75
+0032:  DATA 3A,20
+0034:  DATA 25,32
+0036:  DATA 58,0D
+0038:  DATA 0A,00
+003A:  DATA 43,68
+003C:  DATA 65,63
+003E:  DATA 6B,73
+0040:  DATA 75,6D
+0042:  DATA 20,69
+0044:  DATA 6E,63
+0046:  DATA 6F,72
+0048:  DATA 72,65
+004A:  DATA 63,74
+004C:  DATA 6F,20
+004E:  DATA 43,50
+0050:  DATA 55,20
+0052:  DATA 44,45
+0054:  DATA 54,45
+0056:  DATA 4E,49
+0058:  DATA 44,41
+005A:  DATA 0D,0A
+005C:  DATA 00,00
+*
+00C6:  TBLRD*+
+00C8:  MOVFF  FF6,0C
+00CC:  MOVFF  FF7,0D
+00D0:  MOVFF  FF5,0E
+00D4:  RCALL  00AA
+00D6:  MOVFF  0C,FF6
+00DA:  MOVFF  0D,FF7
+00DE:  DECFSZ 0B,F
+00E0:  BRA    00C6
+00E2:  RETURN 0
+00E4:  BTFSC  0C.7
+00E6:  BRA    0106
+00E8:  MOVLW  0F
+00EA:  MOVWF  00
+00EC:  SWAPF  0B,W
+00EE:  ANDWF  00,F
+00F0:  MOVLW  0A
+00F2:  SUBWF  00,W
+00F4:  BC    00FC
+00F6:  MOVLW  30
+00F8:  ADDWF  00,F
+00FA:  BRA    0100
+00FC:  MOVF   0C,W
+00FE:  ADDWF  00,F
+0100:  MOVFF  00,0E
+0104:  RCALL  00AA
+0106:  MOVLW  0F
+0108:  ANDWF  0B,F
+010A:  MOVLW  0A
+010C:  SUBWF  0B,W
+010E:  BC    0114
+0110:  MOVLW  30
+0112:  BRA    0118
+0114:  BCF    0C.7
+0116:  MOVF   0C,W
+0118:  ADDWF  0B,F
+011A:  MOVFF  0B,0E
+011E:  RCALL  00AA
+0120:  RETURN 0
+0122:  TBLRD*+
+0124:  MOVF   FF5,F
+0126:  BZ    0140
+0128:  MOVFF  FF6,0B
+012C:  MOVFF  FF7,0C
+0130:  MOVFF  FF5,0E
+0134:  RCALL  00AA
+0136:  MOVFF  0B,FF6
+013A:  MOVFF  0C,FF7
+013E:  BRA    0122
+0140:  GOTO   0200 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #include "Definiciones.h" 
+.................... /*  
+....................  * File:   Definiciones.h 
+....................  * Author: Ale 
+....................  * 
+....................  * Created on 25 de julio de 2018, 18:09 
+....................  */ 
+....................  
+.................... #ifndef DEFINICIONES_H 
+.................... #define	DEFINICIONES_H 
+....................  
+.................... #ifdef	__cplusplus 
+.................... extern "C" { 
+.................... #endif 
+....................  
+.................... #ifdef	__cplusplus 
+.................... } 
+.................... #endif 
+....................  
+....................  
+.................... char temper_sup = 50; //temperaturas de encendido y apagado equipo 
+.................... char temper_inf = 4; 
+.................... char checksum_rom = 0; //contiene el checksum de la rom del equipo 
+....................  
+.................... //#define enable PIN_C3 
+.................... #define	BUZER PIN_C4 
+.................... //#define	RS485 PIN_C5 
+.................... #define	ONPC PIN_E1 
+....................  
+....................  
+.................... //Estados del sistema (banderas): 
+.................... int1 equipo_on = 0; //Flag que indica si la unidad de registro esta encendida o apagada 
+.................... int1 habilit_temp = 0; //Habilitacion por temperatura de encendio 1=habilita encendido, cero lo niega 
+....................  
+....................  
+.................... #endif	/* DEFINICIONES_H */ 
+....................  
+....................  
+....................  
+.................... #device adc=8 
+....................  
+.................... #FUSES HS                    	//High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD) 
+.................... #FUSES WDT                   	//Watch Dog Timer 
+.................... #FUSES WDT128                	//Watch Dog Timer uses 1:128 Postscale 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOOSCSEN              	//Oscillator switching is disabled, main oscillator is source 
+.................... #FUSES BROWNOUT              	//Reset when brownout detected 
+.................... #FUSES BORV42                	//Brownout reset at 4.2V 
+.................... #FUSES STVREN                	//Stack full/underflow will cause reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES PROTECT               	//Code protected from reads 
+.................... #FUSES NOCPB                 	//No Boot Block code protection 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES NOWRTC                	//Configuration registers not write protected 
+.................... #FUSES NOWRTB                	//Boot block not write protected 
+.................... #FUSES NOWRTD                	//Data EEPROM not write protected 
+.................... #FUSES NOEBTR                	//Memory not protected from table reads 
+.................... #FUSES NOEBTRB               	//Boot block not protected from table reads 
+....................  
+....................  
+.................... #use delay(clock=20000000)                      //Frecuecnia del cristal 
+.................... #use rs232(baud=57600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,enable=PIN_C5)  
+*
+00AA:  BCF    F94.5
+00AC:  BSF    F8B.5
+00AE:  BTFSS  F9E.4
+00B0:  BRA    00AE
+00B2:  BCF    F94.5
+00B4:  BSF    F8B.5
+00B6:  MOVFF  0E,FAD
+00BA:  NOP   
+00BC:  BTFSS  FAC.1
+00BE:  BRA    00BC
+00C0:  BCF    F94.5
+00C2:  BCF    F8B.5
+00C4:  RETURN 0
+.................... #ZERO_RAM 
+....................  
+....................  
+.................... /*#include <stdio.h> 
+.................... #include <stdlib.h> 
+....................  */ 
+.................... /* 
+....................  *  
+....................  */ 
+.................... /*Definición de métodos*/ 
+.................... void Leer_Parametros_EEPROM(void); //lee los parametros de la eeprom y la temperatura 
+.................... char analiza_checksum(void); //lee una por una las instrucciones y va calculando el checksum 
+.................... char lee_temperatura(void); 
+.................... char analiza_temp_vbat(void); 
+.................... void pulsa_encendido_pc(void); 
+....................  
+.................... void main(void) { 
+*
+020A:  CLRF   FF8
+020C:  BCF    FD0.7
+020E:  MOVLW  FE
+0210:  MOVWF  00
+0212:  MOVLW  06
+0214:  MOVWF  01
+0216:  MOVLW  02
+0218:  MOVWF  FE9
+021A:  MOVLW  00
+021C:  MOVWF  FEA
+021E:  CLRF   FEE
+0220:  DECFSZ 00,F
+0222:  BRA    021E
+0224:  DECFSZ 01,F
+0226:  BRA    021E
+0228:  MOVLW  32
+022A:  MOVWF  04
+022C:  MOVLW  04
+022E:  MOVWF  05
+0230:  CLRF   06
+0232:  BCF    07.0
+0234:  BCF    07.1
+0236:  BCF    F94.5
+0238:  BCF    F8B.5
+023A:  MOVLW  15
+023C:  MOVWF  FAF
+023E:  MOVLW  A6
+0240:  MOVWF  FAC
+0242:  MOVLW  90
+0244:  MOVWF  FAB
+0246:  BSF    FC1.0
+0248:  BSF    FC1.1
+024A:  BSF    FC1.2
+024C:  BCF    FC1.3
+....................     setup_adc_ports(NO_ANALOGS); 
+024E:  BSF    FC1.0
+0250:  BSF    FC1.1
+0252:  BSF    FC1.2
+0254:  BCF    FC1.3
+....................     setup_adc(ADC_OFF); 
+0256:  BCF    FC2.0
+....................     setup_psp(PSP_DISABLED); 
+0258:  BCF    F96.4
+....................     setup_spi(SPI_SS_DISABLED); 
+025A:  BCF    FC6.5
+025C:  BCF    F94.5
+025E:  BSF    F94.4
+0260:  BCF    F94.3
+0262:  MOVLW  01
+0264:  MOVWF  FC6
+0266:  MOVLW  00
+0268:  MOVWF  FC7
+....................     setup_wdt(WDT_OFF); 
+026A:  BCF    FD1.0
+....................     setup_timer_0(RTCC_INTERNAL); 
+026C:  MOVLW  80
+026E:  MOVWF  FD5
+....................     setup_timer_1(T1_INTERNAL | T1_DIV_BY_8); 
+0270:  MOVLW  B5
+0272:  MOVWF  FCD
+....................     setup_timer_2(T2_DIV_BY_16, 249, 5); //1,249,1 
+0274:  MOVLW  20
+0276:  IORLW  06
+0278:  MOVWF  FCA
+027A:  MOVLW  F9
+027C:  MOVWF  FCB
+....................     setup_timer_3(T3_DISABLED | T3_DIV_BY_1); 
+027E:  CLRF   FB1
+....................     setup_ccp1(CCP_COMPARE_RESET_TIMER); // 
+0280:  MOVLW  0B
+0282:  MOVWF  FBD
+....................     CCP_1_LOW = 0x28; //valores de comparacion del timer1 para generar una interrup cada 100 ms 
+0284:  MOVLW  28
+0286:  MOVWF  FBE
+....................     CCP_1_HIGH = 0xf4; // low=60 high=c3 
+0288:  MOVLW  F4
+028A:  MOVWF  FBF
+....................     //enable_interrupts(int_timer2); 
+....................     enable_interrupts(INT_RDA); 
+028C:  BSF    F9D.5
+....................     //enable_interrupts(int_tbe); 
+....................     enable_interrupts(INT_CCP1); 
+028E:  BSF    F9D.2
+....................     enable_interrupts(INT_TIMER2); 
+0290:  BSF    F9D.1
+....................     enable_interrupts(GLOBAL); 
+0292:  MOVLW  C0
+0294:  IORWF  FF2,F
+....................  
+....................  
+....................     output_a(0); 
+0296:  CLRF   F92
+0298:  CLRF   F89
+....................     output_c(0); 
+029A:  CLRF   F94
+029C:  CLRF   F8B
+....................     output_d(0); 
+029E:  CLRF   F95
+02A0:  CLRF   F8C
+....................     output_e(0); 
+02A2:  BCF    F96.0
+02A4:  BCF    F96.1
+02A6:  BCF    F96.2
+02A8:  CLRF   F8D
+....................  
+.................... #use standard_io(d) 
+....................  
+....................     set_tris_a(0x23); 
+02AA:  MOVLW  23
+02AC:  MOVWF  F92
+....................     set_tris_b(0xff); //todas como entradas 
+02AE:  MOVLW  FF
+02B0:  MOVWF  F93
+....................     set_tris_c(0x80); 
+02B2:  MOVLW  80
+02B4:  MOVWF  F94
+....................     set_tris_d(0xff); //sensor del semaforo 
+02B6:  MOVLW  FF
+02B8:  MOVWF  F95
+....................     set_tris_e(0x00); 
+02BA:  BCF    F96.0
+02BC:  BCF    F96.1
+02BE:  BCF    F96.2
+....................  
+....................  
+....................  
+....................     //    return (EXIT_SUCCESS); 
+....................     Leer_Parametros_EEPROM(); 
+02C0:  BRA    005E
+....................     if (analiza_checksum() != 0) { 
+02C2:  BRA    0144
+02C4:  MOVF   01,F
+02C6:  BZ    02C8
+....................         //sigue el programa 
+....................  
+....................     } 
+.................... } 
+....................  
+02C8:  SLEEP 
+.................... void Leer_Parametros_EEPROM(void) { 
+....................  
+....................     temper_sup = read_eeprom(9); //temperaturas de encendido y apagado equipo 
+*
+005E:  MOVFF  FF2,08
+0062:  BCF    FF2.7
+0064:  MOVLW  09
+0066:  MOVWF  FA9
+0068:  BCF    FA6.6
+006A:  BCF    FA6.7
+006C:  BSF    FA6.0
+006E:  MOVF   FA8,W
+0070:  BTFSC  08.7
+0072:  BSF    FF2.7
+0074:  MOVWF  04
+....................     temper_inf = read_eeprom(10); 
+0076:  MOVFF  FF2,08
+007A:  BCF    FF2.7
+007C:  MOVLW  0A
+007E:  MOVWF  FA9
+0080:  BCF    FA6.6
+0082:  BCF    FA6.7
+0084:  BSF    FA6.0
+0086:  MOVF   FA8,W
+0088:  BTFSC  08.7
+008A:  BSF    FF2.7
+008C:  MOVWF  05
+....................     checksum_rom = read_eeprom(13); 
+008E:  MOVFF  FF2,08
+0092:  BCF    FF2.7
+0094:  MOVLW  0D
+0096:  MOVWF  FA9
+0098:  BCF    FA6.6
+009A:  BCF    FA6.7
+009C:  BSF    FA6.0
+009E:  MOVF   FA8,W
+00A0:  BTFSC  08.7
+00A2:  BSF    FF2.7
+00A4:  MOVWF  06
+00A6:  GOTO   02C2 (RETURN)
+....................  
+.................... } 
+....................  
+.................... char analiza_checksum() { 
+....................  
+....................     long int l_digit_long; 
+....................     char valor; 
+....................  
+....................     valor = 0; 
+*
+0144:  CLRF   0A
+....................     l_digit_long = 0; 
+0146:  CLRF   09
+0148:  CLRF   08
+....................     checksum_rom = read_eeprom(13); 
+014A:  MOVFF  FF2,0B
+014E:  BCF    FF2.7
+0150:  MOVLW  0D
+0152:  MOVWF  FA9
+0154:  BCF    FA6.6
+0156:  BCF    FA6.7
+0158:  BSF    FA6.0
+015A:  MOVF   FA8,W
+015C:  BTFSC  0B.7
+015E:  BSF    FF2.7
+0160:  MOVWF  06
+....................     printf("Checksum rom cpu: %2X\r\n", checksum_rom); 
+0162:  MOVLW  04
+0164:  MOVWF  FF6
+0166:  MOVLW  00
+0168:  MOVWF  FF7
+016A:  MOVLW  12
+016C:  MOVWF  0B
+016E:  RCALL  00C6
+0170:  MOVFF  06,0B
+0174:  MOVLW  37
+0176:  MOVWF  0C
+0178:  RCALL  00E4
+017A:  MOVLW  0D
+017C:  MOVWF  0E
+017E:  RCALL  00AA
+0180:  MOVLW  0A
+0182:  MOVWF  0E
+0184:  RCALL  00AA
+....................  
+....................     for (l_digit_long = 1960; l_digit_long < 8191; l_digit_long++) //lee 8k de rom 
+0186:  MOVLW  07
+0188:  MOVWF  09
+018A:  MOVLW  A8
+018C:  MOVWF  08
+018E:  MOVF   09,W
+0190:  SUBLW  1F
+0192:  BNC   01C6
+0194:  BNZ   019C
+0196:  MOVF   08,W
+0198:  SUBLW  FE
+019A:  BNC   01C6
+....................     { 
+....................         valor ^= read_program_eeprom(l_digit_long); //valor_long or exclusive con el anterior, calcula checksum 
+019C:  MOVFF  FF2,0B
+01A0:  BCF    FF2.7
+01A2:  CLRF   FF8
+01A4:  MOVFF  09,FF7
+01A8:  MOVFF  08,FF6
+01AC:  TBLRD*+
+01AE:  MOVF   FF5,W
+01B0:  TBLRD*
+01B2:  MOVFF  FF5,03
+01B6:  CLRF   FF8
+01B8:  BTFSC  0B.7
+01BA:  BSF    FF2.7
+01BC:  XORWF  0A,F
+01BE:  INCF   08,F
+01C0:  BTFSC  FD8.2
+01C2:  INCF   09,F
+01C4:  BRA    018E
+....................     } 
+....................     valor = valor^0x4d; 
+01C6:  MOVLW  4D
+01C8:  XORWF  0A,F
+....................     ////// atento PACHA. programar el CRC-8 
+....................  
+....................     printf("Checksum calculado cpu: %2X\r\n", valor); 
+01CA:  MOVLW  1C
+01CC:  MOVWF  FF6
+01CE:  MOVLW  00
+01D0:  MOVWF  FF7
+01D2:  MOVLW  18
+01D4:  MOVWF  0B
+01D6:  RCALL  00C6
+01D8:  MOVFF  0A,0B
+01DC:  MOVLW  37
+01DE:  MOVWF  0C
+01E0:  RCALL  00E4
+01E2:  MOVLW  0D
+01E4:  MOVWF  0E
+01E6:  RCALL  00AA
+01E8:  MOVLW  0A
+01EA:  MOVWF  0E
+01EC:  RCALL  00AA
+....................  
+....................     valor = valor^checksum_rom; //el xor del checsum  
+01EE:  MOVF   06,W
+01F0:  XORWF  0A,F
+....................  
+....................     if (valor != 0) { 
+01F2:  MOVF   0A,F
+01F4:  BZ    0202
+....................         printf("Checksum incorrecto CPU DETENIDA\r\n"); 
+01F6:  MOVLW  3A
+01F8:  MOVWF  FF6
+01FA:  MOVLW  00
+01FC:  MOVWF  FF7
+01FE:  BRA    0122
+....................         reset_cpu(); 
+0200:  RESET
+....................     } 
+....................     return valor; 
+0202:  MOVFF  0A,01
+0206:  GOTO   02C4 (RETURN)
+.................... } 
+....................  
+.................... void analiza_temp_vbat(void) { 
+....................  
+....................     lee_temperatura(); //devuelve habilit_temp=1, temperatura en rango, hablit_temp=0 temperatura mal 
+....................  
+....................  
+....................     if (equipo_on == 0 && (habilit_temp == 0)) //la pc, esta apagada, debe hacer un ruido para indicar condicion de temperatura 
+....................     { 
+....................         output_bit(BUZER, 1); 
+....................         delay_ms(100); 
+....................         output_bit(BUZER, 0); 
+....................         delay_ms(300); 
+....................     } 
+....................  
+....................     if (equipo_on == 0 && habilit_temp == 1) // PC apagada, temperatura en rango, debe encender pc, se resetea up 
+....................     { 
+....................         reset_cpu(); //resetea el up, para encender la PC 
+....................         equipo_on = 1; 
+....................     } 
+....................  
+....................     if (equipo_on == 1 && (habilit_temp == 0)) //PC encendida, tension u temperatura u ambas fuera de rango, se debe apagar PC y resetear up 
+....................     { 
+....................         pulsa_encendido_pc(); //presiona encendido pc, para apagarla 
+....................         equipo_on = 0; //indica que la PC esta apagada 
+....................     } 
+....................  
+.................... } //final del void 
+....................  
+.................... void lee_temperatura(void) { 
+....................     char temperatura; 
+....................  
+....................     setup_port_a(ALL_ANALOG); 
+....................     setup_adc(ADC_CLOCK_DIV_64); 
+....................     habilit_temp = 0; //pone en cero la habilitacion para el encendido del equipo 
+....................  
+....................  
+....................     set_adc_channel(0); 
+....................     delay_us(20); 
+....................     temperatura = read_adc(); //al valor lelido hay que restarle el de la referencia 
+....................  
+....................     if (temperatura <= temper_sup && temperatura >= temper_inf) { 
+....................         habilit_temp = 1; //habilita para el encendido del equipo por temperatura en rango 
+....................     } 
+....................     //	habilit_temp=1;		//colocado para pasar interferencias sen el 2013 
+....................  
+....................     Setup_adc_ports(NO_ANALOGS); 
+....................  
+....................  
+....................  
+.................... } //final del void 
+....................  
+.................... void pulsa_encendido_pc(void) { 
+....................  
+....................     output_bit(ONPC, 1); //APAGA LA CPU 
+....................     delay_ms(1000); //espera 1 segundo con el pulsador activado 
+....................     output_bit(ONPC, 0); //Saca condicion APAGADO 
+....................  
+.................... } 
+....................  
+....................  
+.................... void arranca_cpu(void) { 
+.................... /* 
+....................     rtcc_on_off = 0; 
+....................     flag_f5 = 0; 
+....................     while (flag_f5 == 0 && rtcc_on_off <= 100) //espera 10 segundos que responda la pc 
+....................     { 
+....................  
+....................         putc(0xf5); //envia f5 por el puerto rs232 
+....................         delay_ms(200); 
+....................     } 
+....................  
+....................     if (flag_f5 == 0) //La CPU se encuentra o colgada o apagada		 
+....................     { 
+....................  
+....................         h_digit = 5; 
+....................         retardo_segundos(h_digit); //retardo para que se estabilicen las tensiones 
+....................         lee_temperatura(); 
+....................  
+....................         if (habilit_temp == 1) // si la temperatura  esta en rango el equipo  arranca y la hora esta ok 
+....................         { 
+....................             printf("\r\nEncendiendo quipo = %2u\n\r", temperatura); 
+....................  
+....................             pulsa_encendido_pc(); //enciende pc	 
+....................             equipo_on = 1; //variable que indica equipo encendido 
+....................  
+....................             rtcc_on_off = 0; //pone en cero el rtcc, que se incrementa cada 100 ms 
+....................             valor = 1; 
+....................  
+....................             while (valor) { 
+....................                 while (flag_f5 == 0 && rtcc_on_off <= 3600) // si no se recibio f5 o paso 6 minutos 
+....................                 { 
+....................  
+....................                     putc(0xf5), putc(temperatura), putc(v_nominal); //envia f5 por el puerto rs232 
+....................                     delay_ms(200); //retardo de 100 ms 
+....................                 } //final del while 
+....................  
+....................                 if (rtcc_on_off >= 3600 && flag_f5 == 0) //pasaron 5 minutos y no se recibio respuesta 
+....................                 { 
+....................                     output_bit(BUZER, 1); 
+....................                     output_bit(ONPC, 1); //resetea PC			 
+....................  
+....................                     h_digit = 5; 
+....................                     retardo_segundos(h_digit); 
+....................  
+....................                     output_bit(ONPC, 0); //pone en condicion 0 
+....................                     output_bit(BUZER, 0); 
+....................  
+....................                     h_digit = 180; //retardo de 3 minuto 0 segundos 
+....................                     retardo_segundos(h_digit); 
+....................  
+....................                     reset_cpu(); 
+....................                 } 
+....................  
+....................                 if (flag_f5 == 1) //se recibio f5 como rta 
+....................                 { 
+....................                     valor = 0; 
+....................                     flag_f5 = 0; 
+....................                     equipo_on = 1; 
+....................                 } 
+....................             } //final while valor 
+....................             //			envia_la_fecha();		//transmite la fecha y hora al cpu para sincronizar 
+....................  
+....................         } 
+....................         else if (habilit_temp == 0) { 
+....................  
+....................             if (habilit_temp == 0) 
+....................                 printf("\r\nDetenido x temper.=%2u\n\r", temperatura); 
+....................  
+....................             output_bit(BUZER, 1); 
+....................             delay_ms(700); 
+....................             output_bit(BUZER, 0); 
+....................             reset_cpu(); 
+....................         } 
+....................     } else if (flag_f5 == 1) { 
+....................         equipo_on = 1; //la CPU, ya se encuentra encendida anda todo ok 
+....................         estado_deteccion_1 = 0; 
+....................         estado_deteccion_2 = 0; 
+....................         estado_deteccion_3 = 0; 
+....................         //	lee_temperatura();			//mide la tension y genera el estado de los flag 
+....................         analiza_temp_vbat(); 
+....................     */ 
+.................... } //FINAL DE LA FUNCION 
+
+Configuration Fuses:
+   Word  1: 2200   HS NOOSCSEN
+   Word  2: 0F06   PUT BROWNOUT BORV42 WDT WDT128
+   Word  3: 0100   CCP2C1
+   Word  4: 0081   STVREN NOLVP NODEBUG
+   Word  5: C000   PROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB
